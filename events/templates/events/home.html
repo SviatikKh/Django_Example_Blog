@@ -1,13 +1,14 @@
 
 <!doctype html>
 <html lang="en">
+{% load static%}
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.0.1">
-    <title>Album example · Bootstrap</title>
+    <title>My example blog</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
 
@@ -53,9 +54,9 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto">
-      <a class="nav-item nav-link " href="#">About me </a>
-      <a class="nav-item nav-link" href="#">Telegram</a>
-      <a class="nav-item nav-link" href="#">Blog</a>
+      <a class="nav-item nav-link " href="{%static 'About me.rtf'%}">About me </a>
+      <a class="nav-item nav-link" target="_blank" rel="noopener noreferrer" href="https://telegram.org/">Telegram</a>
+      <a class="nav-item nav-link" href="{%url 'showblog'%}">Blog</a>
      </div>
   </div>
 </nav>
@@ -71,6 +72,7 @@
         <a href="mailto:s@gmail.com" class="btn btn-primary my-2">Mail me</a>
       
       </p>
+      <img src="{% static 'django.jpg' %}" height=200 width=200 class="img-fluid">
     </div>
   </section>
 
